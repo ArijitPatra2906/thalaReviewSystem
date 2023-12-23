@@ -6,24 +6,30 @@ import Confetti from "react-confetti";
 export default function Home() {
   const [input, setInput] = useState("");
   const [text, setText] = useState("");
-  const [windowDimention, setWindowDimention] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+  const [windowDimension, setWindowDimension] = useState<{
+    width: number | undefined;
+    height: number | undefined;
+  }>({
+    width: undefined,
+    height: undefined,
   });
 
   const detectSize = () => {
-    setWindowDimention({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
+    if (typeof window !== "undefined") {
+      setWindowDimension({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
   };
-
   useEffect(() => {
-    window.addEventListener("resize", detectSize);
-    return () => {
-      window.removeEventListener("resize", detectSize);
-    };
-  });
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", detectSize);
+      return () => {
+        window.removeEventListener("resize", detectSize);
+      };
+    }
+  }, []);
   const calculateSum = (number: any) => {
     let sum = 0;
     while (number > 0) {
@@ -62,8 +68,8 @@ export default function Home() {
     <main className="flex flex-col justify-center items-center h-[100vh]">
       {(text === "sumEqualsSeven" || text === "lengthEqualsSeven") && (
         <Confetti
-          width={windowDimention.width}
-          height={windowDimention.height}
+          width={windowDimension.width}
+          height={windowDimension.height}
           tweenDuration={1000}
         />
       )}
