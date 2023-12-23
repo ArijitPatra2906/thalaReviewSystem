@@ -99,8 +99,7 @@ export default function Home() {
 
           {text === "sumEqualsSeven" || text === "lengthEqualsSeven" ? (
             <div className="my-3">
-              {/* <audio src="/assets/thala.mp3">wewe</audio> */}
-              <video width="270" autoPlay loop>
+              <video width="300" autoPlay loop>
                 <source src="/assets/thalaa.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
