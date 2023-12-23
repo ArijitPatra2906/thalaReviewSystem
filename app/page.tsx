@@ -138,9 +138,9 @@ export default function Home() {
           )}
         </div>
 
-        <div className="text-center pt-2 text-sm font-semibold text-gray-600">
+        {/* <div className="text-center pt-2 text-sm font-semibold text-gray-600">
           Made by Arijit Patra😎
-        </div>
+        </div> */}
       </div>
     </main>
   );
