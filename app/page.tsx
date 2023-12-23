@@ -73,7 +73,7 @@ export default function Home() {
           tweenDuration={1000}
         />
       )}
-      <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
+      <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow px-2">
         <div className="">
           <h4 className="text-center text-xl font-bold pb-4">
             Thala review system😜
@@ -86,7 +86,7 @@ export default function Home() {
                 value={input}
                 id="small-input"
                 placeholder="Enter Anything"
-                className="block w-full p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block w-full p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs"
               />
             </div>
             <button
