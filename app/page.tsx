@@ -73,7 +73,7 @@ export default function Home() {
           tweenDuration={1000}
         />
       )}
-      <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
         <div className="">
           <h4 className="text-center text-xl font-bold pb-4">
             Thala review system😜
