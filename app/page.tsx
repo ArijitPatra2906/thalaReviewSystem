@@ -121,7 +121,7 @@ export default function Home() {
                   <source src="/assets/moye.mp3" type="audio/mp3" />
                   Your browser does not support the audio element.
                 </audio>
-                <Image src="/assets/gif.gif" alt="" width={290} height={222} />
+                <Image src="/assets/gif.gif" alt="" width={300} height={222} />
                 <h4 className="pt-2 font-bold text-center">
                   No Thala for You😫
                 </h4>
