@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -65,7 +66,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col justify-center items-center h-[100vh]">
+    <main className="flex flex-col justify-center items-center h-[100vh] overflow-scroll ">
       {(text === "sumEqualsSeven" || text === "lengthEqualsSeven") && (
         <Confetti
           width={windowDimension.width}
@@ -137,9 +138,18 @@ export default function Home() {
           )}
         </div>
 
-        {/* <div className="text-center pt-2 text-sm font-semibold text-gray-600">
-          Made by Arijit Patra😎
-        </div> */}
+        <div className="items-center justify-center gap-3 flex pt-6 text-sm font-semibold text-gray-600">
+          Made by Arijit Patra |
+          <a href="https://github.com/ArijitPatra2906" target="_blank">
+            <FaGithub
+              className="text-center"
+              style={{
+                fontSize: "1.4em",
+                // marginLeft: "18px",
+              }}
+            />
+          </a>
+        </div>
       </div>
     </main>
   );
